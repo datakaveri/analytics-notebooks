@@ -11,7 +11,7 @@ Complete details about each implementation and related informations is given in 
 
 ## Interpolation of PM2.5 data
 
-The notebooks uses PM2.5 data to provide proof of concenp. However, notebooks can be used for any pollutant. 
+The notebooks uses PM2.5 data to implement state-of-the-art models to perform anamoly detection, imputation, and interpolation. However, notebooks can be used for any pollutant. 
 
 ## Virtual environments
 
