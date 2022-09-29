@@ -6,8 +6,8 @@ This directory contains two major implementations of spatio-temporal interpolati
 Air Quality Dataset from Indian city of Pune. Input data is preprocessed to remove outliers and fill all the missing values.
 
 
-## Inductive Graph Neural Network for Spatiotemporal Kriging
-
+## Inductive Graph Neural Network for Spatiotemporal Kriging (IGNNK)
+The Inductive Graph Neural Network Kriging (IGNNK) model is developed to recover data for unsampled sensors on a network/graph structure. IGNNK generate random subgraphs as samples and the corresponding adjacency matrix for each sample. By reconstructing all signals on each sample subgraph, IGNNK can effectively learn the spatial message passing mechanism. In addition, learned model can be successfully transferred to the same type of kriging tasks on an various dataset.
 
 ### Dependencies
 - Numpy
@@ -29,6 +29,7 @@ Air Quality Dataset from Indian city of Pune. Input data is preprocessed to remo
 `IGNNKKriging.yml` file: Configuration file for IGNNK implementation.
 
 ## Deep Learning Framework
+Originally, deep learning framework is developed for spatio-temporal prediction of climate and environmental data. This approach has two key advantages. First, the decomposition of the spatio-temporal signal into fixed temporal bases and stochastic spatial coefficients. Second, Deep learning algorithms are particularly well suited to solve this problem because of their automatic feature representation learning. Furthermore, this framework is able to capture non-linear patterns in the data, as it models spatio-temporal fields as a combination of products of temporal bases by spatial coefficients. This framework succeeds at recovering spatial, temporal and spatio-temporal dependencies in both simulated and real-world data. Furthermore, this framework can eventually be generalized to study other climate fields and environmental spatio-temporal phenomena—e.g. air pollution or wind speed—or to solve missing data imputation problems in spatio-temporal datasets collected by satellites for earth observation or resulting from climate models.
 
 ### Dependencies
 - Numpy
