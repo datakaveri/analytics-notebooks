@@ -1,1 +1,1 @@
-Ordinary Kriging
+# Ordinary Kriging
