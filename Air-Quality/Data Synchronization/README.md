@@ -24,6 +24,6 @@ Original Air Quality Dataset from Indian city of Pune.
 - Datetime
 
 ### Files
-`Date_Time_Synchronization.ipynb` file: Jupyter notebook peforms date time synchronization on unstructured dataset.
-`Date_Time_Synchronization.png` file: Image file illustrating data synchronization.
+`Date_Time_Synchronization.ipynb` file: Jupyter notebook peforms date time synchronization on unstructured dataset.\
+`Date_Time_Synchronization.png` file: Image file illustrating data synchronization.\
 `Data_Preprocessing.yml` file: Configuration file for outlier detection.
