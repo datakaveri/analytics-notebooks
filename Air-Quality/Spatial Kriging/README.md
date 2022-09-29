@@ -17,6 +17,6 @@ Folium\
 Scikit-gstat
 
 ### Files
-`Pune_AQI_Interpolation_Gaussian.ipynb` file: Jupyter notebook for spatial interpolation using Ordinary Kriging in PyKrige package.
-`Spatial_Kriging.yml` file: Configuration file for spatial interpolation.
+`Pune_AQI_Interpolation_Gaussian.ipynb` file: Jupyter notebook for spatial interpolation using Ordinary Kriging in PyKrige package.\
+`Spatial_Kriging.yml` file: Configuration file for spatial interpolation.\
 `avg_aqm_csv.csv` file; Input data set.
