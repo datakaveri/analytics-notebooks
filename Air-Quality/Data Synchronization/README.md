@@ -11,8 +11,10 @@ This notebook provides consistency between source and target data stores, and th
 - If there are multiple observations in the given time period, mean will be taken.
 - If there are no observations in the given time period, NaN will be taken.
 
-### Python Packages
+### Dataset
+Original Air Quality Dataset from Indian city of Pune.
 
+### Dependencies
 - Numpy
 - Pandas
 - Statsmodels
@@ -20,3 +22,8 @@ This notebook provides consistency between source and target data stores, and th
 - Seaborn
 - Matplotlib
 - Datetime
+
+### Files
+`Date_Time_Synchronization.ipynb` file: Jupyter notebook peforms date time synchronization on unstructured dataset.
+`Date_Time_Synchronization.png` file: Image file illustrating data synchronization.
+`Data_Preprocessing.yml` file: Configuration file for outlier detection.
