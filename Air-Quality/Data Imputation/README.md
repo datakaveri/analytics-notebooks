@@ -15,6 +15,6 @@ This directory contains a jupyter notebook to fill missing values, data imputati
 
 ## References
 <a id="1">[1]</a> 
-Dijkstra, E. W. (1968). 
-Go to statement considered harmful. 
-Communications of the ACM, 11(3), 147-148.
+Andrea Cini, Ivan Marisca, and Cesare Alippi, (2021)
+Multivariate Time Series Imputation by Graph Neural Networks,
+International Conference on Learning Representations.
