@@ -3,7 +3,7 @@
 This directory contains two major implementations of spatio-temporal interpolation models [Inductive Graph Neural Network for Spatiotemporal Kriging](https://ojs.aaai.org/index.php/AAAI/article/view/16575)(IGNNK) and [Deep Learning based spatio-temporal time series prediction framework](https://www.nature.com/articles/s41598-020-79148-7). 
 
 ## Dataset
-Air Quality Dataset from Indian city of Pune. Input data is preprocessed to remove outliers and fill all the missing values.
+Air Quality Dataset from Indian city of Pune. Input data is preprocessed using [Outliers Detection](https://github.com/datakaveri/analytics-notebooks/tree/main/Air-Quality/Outliers%20Detection) and [Data Imputation](https://github.com/datakaveri/analytics-notebooks/tree/main/Air-Quality/Data%20Imputation).
 
 
 ## Inductive Graph Neural Network for Spatiotemporal Kriging (IGNNK)
