@@ -17,3 +17,6 @@ The notebooks uses PM2.5 data to implement state-of-the-art models to perform [a
 ## Virtual environments
 The complete list of packages and dependencies can be found in yml file in each folder in the corresponding topic directory. These files can be used to replicate all the environments for smooth and flawless execuation.
 
+## Changelog
+### Version 0.1 (29-09-2022)
+Initial release
