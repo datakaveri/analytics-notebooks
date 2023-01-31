@@ -1,0 +1,86 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+data:
+  type: pandas.ParquetDataSet
+  filepath: data/data.parquet
+
+swm_data:
+  type: pandas.ParquetDataSet
+  filepath: data/temp3_for_tgcn_hex.parquet
+
+hex_loc:
+ type: pandas.ParquetDataSet
+ filepath: data/hex.parquet
+
+matrix:
+ type: pandas.ParquetDataSet
+ filepath: data/hex_matrix.parquet
+ 
+preprocessed_data:
+ type: pandas.ParquetDataSet
+ filepath: data/preprocessed_data.parquet
+ 
+preprocessed_with_h3:
+ type: pandas.ParquetDataSet
+ filepath: data/preprocessed_with_h3.parquet
+ 
+filtered_data:
+ type: pandas.ParquetDataSet
+ filepath: data/filtered_data.parquet
+ 
+hourly_data:
+ type: pandas.ParquetDataSet
+ filepath: data/hourly_data.parquet
+ 
+train_data:
+ type: pandas.ParquetDataSet
+ filepath: data/train.parquet
+ 
+test_data:
+ type: pandas.ParquetDataSet
+ filepath: data/test.parquet
+ 
+train_scaled:
+ type: pandas.ParquetDataSet
+ filepath: data/train_scaled.parquet
+ 
+test_scaled:
+ type: pandas.ParquetDataSet
+ filepath: data/test_scaled.parquet
+ 
+trainX:
+ type: pandas.ParquetDataSet
+ filepath: data/trainx.parquet
+ 
+testX:
+ type: pandas.ParquetDataSet
+ filepath: data/testx.parquet
+ 
+trainY:
+ type: pandas.ParquetDataSet
+ filepath: data/trainy.parquet
+ 
+testY:
+ type: pandas.ParquetDataSet
+ filepath: data/testy.parquet
+ 
+y_pred_testX:
+ type: pandas.ParquetDataSet
+ filepath: data/prediction.parquet
+ 
+plot:
+  type: plotly.PlotlyDataSet
+  filepath: data/plot.json
+  plotly_args:
+    type: bar
+    fig:
+      x: speed
+      y: h3_ids_9
+      orientation: h
+    layout:
+      xaxis_title: No of Vehicles
+      yaxis_title: H3_ids
+      title: Overall vehicle distribution

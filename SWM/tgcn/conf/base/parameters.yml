@@ -1,0 +1,11 @@
+initial_date: '2022-01-01 00:00:00'
+final_date: '2022-03-15 23:59:59'
+latitude_boundary: 26
+longitude_boundary: 84
+train_portion: 0.85
+initial_datetime: [2022, 1, 1, 0, 0]
+final_datetime: [2022, 3, 15,23,59]
+seq_len: 12 
+pre_len: 1
+learning_rate: 0.001
+resolution: 9
