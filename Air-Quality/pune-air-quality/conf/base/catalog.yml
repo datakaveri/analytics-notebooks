@@ -1,0 +1,96 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+raw_data:
+    type: pandas.CSVDataSet
+    filepath: data/01_raw/PuneAQM_latest.csv
+    
+sensor_data:
+    type: pandas.ParquetDataSet
+    filepath: data/01_raw/pune_aqm_sensor_data.parquet
+    
+sensor_ids:
+    type: pandas.CSVDataSet
+    filepath: data/01_raw/ids.csv
+        
+preprocessed_raw_data:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/preprocessed_raw_data.parquet
+    
+processed_data:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/processed_data.parquet
+
+time_synchronized_data:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/time_synchronized_data.parquet
+    
+airQualityIndex:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/airQualityIndex_imputated_data.parquet
+    
+airTemperature:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/airTemperature_imputated_data.parquet
+    
+ambientNoise:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/ambientNoise_imputated_data.parquet
+    
+atmosphericPressure:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/atmosphericPressure_imputated_data.parquet
+    
+co:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/co_imputated_data.parquet
+    
+co2:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/co2_imputated_data.parquet
+    
+illuminance:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/illuminance_imputated_data.parquet
+
+no2:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/no2_imputated_data.parquet
+    
+o3:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/o3_imputated_data.parquet
+    
+pm2p5:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/pm2p5_imputated_data.parquet
+    
+pm10:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/pm10_imputated_data.parquet
+    
+so2:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/so2_imputated_data.parquet
+    
+uv:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/uv_imputated_data.parquet
+    
+relativeHumidity:
+    type: pandas.ParquetDataSet
+    filepath: data/05_model_input/relativeHumidity_imputated_data.parquet
+    
+known_latlon:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/known_latlon.parquet
+    
+unknown_latlon:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/unknown_latlon.parquet
+    
+latlon:
+    type: pandas.ParquetDataSet
+    filepath: data/02_intermediate/latlon.parquet
