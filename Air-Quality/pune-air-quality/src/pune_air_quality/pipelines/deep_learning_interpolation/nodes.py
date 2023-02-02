@@ -182,6 +182,8 @@ def deep_learning_model(data: pd.DataFrame, known_latlon: pd.DataFrame, unknown_
         
     Returns:
         None
+        Exports the Interpolated Data (numpy.array) to csv file {pollutant_name}_interpolated_data.csv with rows being unknown locations 
+        and columns being time series data
     """
 
     # Load column oreder from parameters
@@ -200,7 +202,7 @@ def deep_learning_model(data: pd.DataFrame, known_latlon: pd.DataFrame, unknown_
     
     # Run Principle Component Analysis on pollutant data.
     alpha_k, components, coff_scaler, pca = run_pca(spatio_temporal_observations, parameters["exp_var"])
-    print(alpha_k.shape)
+    
     # Initializer
     initializer = initializers.HeNormal()
     # Early Stopping criterion
@@ -257,5 +259,6 @@ def deep_learning_model(data: pd.DataFrame, known_latlon: pd.DataFrame, unknown_
     # Perform Inverse Tranform on spatio-temporal data to get interpolated data
     Interpolated_Data = data_scaler.inverse_transform(pred_intr_coeff)
     
-    pd.DataFrame(Interpolated_Data).to_parquet('data/07_model_output/'+pollutant_name+'_interpolated_data.parquet')
+    # Convert numpy.array to DataFrame and save as csv file
+    pd.DataFrame(Interpolated_Data).to_csv('data/07_model_output/'+pollutant_name+'_interpolated_data.csv')
 
