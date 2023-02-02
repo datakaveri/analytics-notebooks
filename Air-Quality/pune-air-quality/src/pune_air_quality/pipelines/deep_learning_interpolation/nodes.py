@@ -257,5 +257,5 @@ def deep_learning_model(data: pd.DataFrame, known_latlon: pd.DataFrame, unknown_
     # Perform Inverse Tranform on spatio-temporal data to get interpolated data
     Interpolated_Data = data_scaler.inverse_transform(pred_intr_coeff)
     
-    pd.DataFrame(Interpolated_Data).to_csv('data/07_model_output/'+pollutant_name+'_interpolated_data.parquet')
+    pd.DataFrame(Interpolated_Data).to_parquet('data/07_model_output/'+pollutant_name+'_interpolated_data.parquet')
 
