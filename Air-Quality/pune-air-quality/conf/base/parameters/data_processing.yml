@@ -1,0 +1,18 @@
+# This is a boilerplate parameters config generated for pipeline 'data_processing'
+# using Kedro 0.18.4.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.4/kedro_project_setup/configuration.html#parameters
+initializations:
+    start_time: '2023-01-11 00:00:00+05:30'
+    end_time: '2023-01-11 23:59:59+05:30'
+    column_order: ['id', 'observationDateTime', 'deviceStatus', 'airQualityLevel',              'aqiMajorPollutant', 'airQualityIndex', 'co.avgOverTime',                   'pm10.avgOverTime', 'pm2p5.avgOverTime', 'co2.avgOverTime',
+                    'so2.avgOverTime', 'no2.avgOverTime', 'o3.avgOverTime',
+                    'uv.avgOverTime', 'airTemperature.avgOverTime',
+                    'atmosphericPressure.avgOverTime','illuminance.avgOverTime',
+                    'relativeHumidity.avgOverTime', 'ambientNoise.avgOverTime']
+                
+imputer_options:
+    maximum_iterations: 25
+    tolerance: 0.001
+    
