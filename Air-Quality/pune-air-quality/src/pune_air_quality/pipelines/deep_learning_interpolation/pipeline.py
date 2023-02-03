@@ -21,25 +21,25 @@ def create_pipeline(**kwargs) -> Pipeline:
                 func = deep_learning_model,
                 inputs = ["airQualityIndex", "known_latlon", "unknown_latlon", "params:deep_learning_model", "params:airQualityIndex"],
                 outputs = None,
-                name = "aqi_deep_learning_model_node",
+                name = "air_quality_index_deep_learning_model_node",
             ),
             node(
                 func = deep_learning_model,
                 inputs = ["airTemperature", "known_latlon", "unknown_latlon", "params:deep_learning_model", "params:airTemperature"],
                 outputs = None,
-                name = "at_deep_learning_model_node",
+                name = "air_temperature_deep_learning_model_node",
             ),
             node(
                 func = deep_learning_model,
                 inputs = ["ambientNoise", "known_latlon", "unknown_latlon", "params:deep_learning_model", "params:ambientNoise"],
                 outputs = None,
-                name = "an_deep_learning_model_node",
+                name = "ambient_noise_deep_learning_model_node",
             ),
             node(
                 func = deep_learning_model,
                 inputs = ["atmosphericPressure", "known_latlon", "unknown_latlon", "params:deep_learning_model", "params:atmosphericPressure"],
                 outputs = None,
-                name = "ap_deep_learning_model_node",
+                name = "air_pressure_deep_learning_model_node",
             ),
             node(
                 func = deep_learning_model,
@@ -57,7 +57,7 @@ def create_pipeline(**kwargs) -> Pipeline:
                 func = deep_learning_model,
                 inputs = ["illuminance", "known_latlon", "unknown_latlon", "params:deep_learning_model", "params:illuminance"],
                 outputs = None,
-                name = "il_deep_learning_model_node",
+                name = "illuminance_deep_learning_model_node",
             ),
             node(
                 func = deep_learning_model,
@@ -99,7 +99,7 @@ def create_pipeline(**kwargs) -> Pipeline:
                 func = deep_learning_model,
                 inputs = ["relativeHumidity", "known_latlon", "unknown_latlon", "params:deep_learning_model", "params:relativeHumidity"],
                 outputs = None,
-                name = "rh_deep_learning_model_node",
+                name = "relative_humidity_deep_learning_model_node",
             ),
         ]
     )
