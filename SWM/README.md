@@ -17,3 +17,4 @@ All the dependencies required to run the file are mentioned in requirements.txt.
 
 ## Credits
 [Saanidhya Vats](https://github.com/Saanidhyavats)
+[Chetan Kumar](https://github.com/Chetan5276)
