@@ -1,8 +1,9 @@
 # Varanasi Solid Waste Management - Route Planning
 
 ## Overview
+Varanasi city generates around 700 tons of garbage daily. This garbage is collected and transported by garbage collecting vehicles to a dumping ground outside the city on a daily basis. Monitoring is ensured through a GPS system. Using the network of vehicles and GPS systems, this project aims to provide a route planning solution to all garbage collection vehicles to reduce overall costs.
 
-This is your new Kedro project, which was generated using `Kedro 0.18.5`.
+This project was created using Kedro for reproducibility. This Kedro project was generated using `Kedro 0.18.5`.
 
 Take a look at the [Kedro documentation](https://kedro.readthedocs.io) to get started.
 
@@ -17,8 +18,7 @@ In order to get the best out of the template:
 
 ## How to install dependencies
 
-Declare any dependencies in `src/requirements.txt` for `pip` installation and `src/environment.yml` for `conda` installation.
-
+All necessary dependencies are listed in the `src/requirements.txt` file for installation using `pip`.
 To install them, run:
 
 ```
