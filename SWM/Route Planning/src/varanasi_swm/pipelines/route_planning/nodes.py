@@ -204,6 +204,104 @@ def create_data_model(dump: pd.DataFrame, starting: pd.DataFrame, location_info:
     # Return data Dictionary
     return data
 
+def export_solution(solution):
+    # Create an empty Dictionary for all vehicles
+    Solution_Dictionary = {}
+    print(f'Objective: {solution.ObjectiveValue()}')
+
+    # Variable for total distance
+    total_distance = 0
+    # Variable for total load
+    total_load = 0
+
+    # For all the given vehicles
+    for vehicle_id in range(data['num_vehicles']):
+        # Get index of staring node of current vehicle
+        index = routing.Start(vehicle_id)
+        # Variable for update and printing the output
+        plan_output = 'Route for vehicle {}:\n'.format(vehicle_id)
+        # Variable for route distance
+        route_distance = 0
+        # Variable for route load
+        route_load = 0
+        # Create a name for current vehicle: Format: Vehicle Number
+        Name = 'Vehicle'+' '+str(vehicle_id)
+        # Create an empty ditionary for current vehicle
+        Solution_Dictionary[Name] = {}
+        # Create an empty list for current vehicle load
+        load = []
+        # Create an empty list for current vehicle distance covered
+        distance = []
+        # Create an empty list for all the nodes visisted current vehicle path
+        node_number = []
+        # Create an empty list for type of nodes visited current vehicle 
+        node_type = []
+
+        # While the current index is not the end index
+        while not routing.IsEnd(index):
+            # Convert current index to node index
+            node_index = manager.IndexToNode(index)
+            # Get load of the current node index
+            route_load += data['demands'][node_index]
+            # Assign current index to previous index
+            previous_index = index
+            # Get next node index of the vehicle
+            index = solution.Value(routing.NextVar(index))
+            # Get distance between curent and previous nodes
+            route_distance += routing.GetArcCostForVehicle(
+                    previous_index, index, vehicle_id)
+            # Format the output: NodeIndex(NodeType) Load(Value) Distance(Value) -> 
+            plan_output += ' {0}({2}) Load({1}) Distance({3}) -> '.format(node_index, route_load, location_info['type'][node_index],routing.GetArcCostForVehicle(
+                    previous_index, index, vehicle_id))
+            # Update load of the current node visited by the current vehicle or route
+            load += [data['demands'][node_index]]
+            # Update distance from previous node to current node visited by current vehicle or route
+            distance += [routing.GetArcCostForVehicle(previous_index, index, vehicle_id)]
+            # Update nodes visited by the current vehicle or route
+            node_number += [node_index]
+            # Update type of nodes visited by the current vehicle or route
+            node_type += [location_info['type'][node_index]]
+        # Format the output last visited node: NodeIndex(NodeType) Load(Value) Distance(Value) -> 
+        plan_output += ' {0}({2}) Load({1}) Distance({3})\n'.format(manager.IndexToNode(index),
+                            route_load, location_info['type'][manager.IndexToNode(index)], routing.GetArcCostForVehicle(
+                            previous_index, index, vehicle_id))
+        # Update load of the last node visited by the current vehicle or route
+        load += [data['demands'][manager.IndexToNode(index)]]
+        # Update distance from previous node to last node visited by current vehicle or route
+        #distance += [routing.GetArcCostForVehicle(previous_index, index, vehicle_id)]
+        # Update last node visited by the current vehicle or route
+        node_number += [manager.IndexToNode(index)]
+        # Update type of last node visited by the current vehicle or route
+        node_type += [location_info['type'][manager.IndexToNode(index)]]
+
+        # Assign loads to current vehicle dictionary
+        Solution_Dictionary[Name]['Load'] = load
+        # Assign distance to current vehicle dictionary
+        Solution_Dictionary[Name]['Distance'] = distance
+        # Assign all nodes to current vehicle dictionary
+        Solution_Dictionary[Name]['Node'] = node_number
+        # Assign node types visited by to current vehicle dictionary
+        Solution_Dictionary[Name]['Type'] = node_type
+
+        # Format the output: Add total distance travelled by the current vehicle
+        plan_output += 'Distance of the route: {}m\n'.format(route_distance)
+        # Format the output: Add total load collected by the current vehicle
+        plan_output += 'Load of the route: {}\n'.format(route_load)
+
+        # Print Output of the current vehicle
+        print(plan_output)
+        #print(Solution_Dictionary[Name])
+
+        # Total distance travelled by all the vehicles
+        total_distance += route_distance
+        # Total Load collected by all the vehicles
+        total_load += route_load
+
+    # Print total distance travelled and total load collected by all the vehicles
+    print('Total distance of all routes: {}m'.format(total_distance/100))
+    print('Total load of all routes: {}'.format(total_load))
+    
+    return Solution_Dictionary
 
 def run_route_planner(dump: pd.DataFrame, starting: pd.DataFrame, location_info: pd.DataFrame, pairwise_distance, parameters: Dict):
     """
@@ -366,4 +464,7 @@ def run_route_planner(dump: pd.DataFrame, starting: pd.DataFrame, location_info:
         print('>>>>>> Solution Found <<<<<<<')
     else:
         print('!!!! XXX No Solution Found XXX !!!!!')
+        
+    Solution_Dictionary = export_solution(solution)
+    
     #return solution"""
