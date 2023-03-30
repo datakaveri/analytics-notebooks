@@ -1,4 +1,4 @@
-# varanasi-swm
+# Varanasi Solid Waste Management - Route Planning
 
 ## Overview
 
