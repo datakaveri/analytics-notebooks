@@ -1,0 +1,2 @@
+2023-03-06 17:34:31,777 - kedro.pipeline.node - ERROR - Node 'run_route_planner_node: run_route_planner([dump,starting,location_data,pairwise_distance,params:model_parameters]) -> None' failed with error: 
+name 'solution' is not defined
