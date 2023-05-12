@@ -16,13 +16,25 @@ starting:
     type: pandas.ParquetDataSet
     filepath: data/01_raw/varanasi-parking-location.parquet
 
-location_data:
+location_info:
     type: pandas.ParquetDataSet
-    filepath: data/05_model_input/location_data.parquet
+    filepath: data/05_model_input/location_info.parquet
 
 pairwise_distance:
     type: pandas.CSVDataSet
     filepath: data/05_model_input/pairwise_distance.csv
+
+swm_data:
+    type: pandas.CSVDataSet
+    filepath: data/01_raw/data.csv
+
+capacity_data:
+    type: pandas.CSVDataSet
+    filepath: data/01_raw/capacity_data.csv
+
+Solution_Dictionary:
+    type: json.JSONDataSet
+    filepath: data/07_model_output/Solution_Dictionary,json
 
 #ortools_solution:
 #    type: pickle.PickleDataSet
