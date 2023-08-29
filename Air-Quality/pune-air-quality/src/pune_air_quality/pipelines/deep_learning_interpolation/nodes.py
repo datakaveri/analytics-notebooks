@@ -311,4 +311,4 @@ def deep_learning_model(data: pd.DataFrame, known_latlon: pd.DataFrame, unknown_
     #plt.title('Whatever')
     #plt.show()
     # Convert numpy.array to DataFrame and save as csv file
-    Binned_Data.to_csv('data/07_model_output/binned'+pollutant_name+'_interpolated_data.csv')
+    Binned_Data.to_csv('data/07_model_output/binned_'+pollutant_name+'_interpolated_data.csv')
