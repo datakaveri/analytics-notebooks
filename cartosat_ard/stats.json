@@ -1,0 +1,1 @@
+{"original_images": {"rows": 4, "columns": 3, "file_size": 498}, "histogram_equalized_data": {"rows": 4, "columns": 4, "file_size": 772}, "noise_masked_data": {"rows": 4, "columns": 3, "file_size": 580}, "cloud_mask_data": {"rows": 4, "columns": 3, "file_size": 566}, "pansharpened_data": {"rows": 4, "columns": 4, "file_size": 861}}

@@ -1,0 +1,23 @@
+
+original_images:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/Original_Image.csv
+
+histogram_equalized_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/histogram_equalized_data.csv
+
+noise_masked_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/noise_masked_data.csv
+
+cloud_mask_data:
+  type: pandas.CSVDataset
+  filepath: data/03_primary/cloud_mask_data.csv
+
+pansharpened_data:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/pansharpened_data.csv
+
+
+

@@ -1,0 +1,5 @@
+file_name,mx+noise+cloud_file path,pan_file_path,pansharpened_file_path
+1393,C:\Users\KOYESHA\cartosat_ard\data\03_primary\1393_cloud_masked.tif,C:\Users\KOYESHA\cartosat_ard\data\01_raw\pan\1393.tif,C:\Users\KOYESHA\cartosat_ard\data\04_feature\1393_pansharpened.tif
+2848,C:\Users\KOYESHA\cartosat_ard\data\03_primary\2848_cloud_masked.tif,C:\Users\KOYESHA\cartosat_ard\data\01_raw\pan\2848.tif,C:\Users\KOYESHA\cartosat_ard\data\04_feature\2848_pansharpened.tif
+1304,C:\Users\KOYESHA\cartosat_ard\data\03_primary\1304_cloud_masked.tif,C:\Users\KOYESHA\cartosat_ard\data\01_raw\pan\1304.tif,C:\Users\KOYESHA\cartosat_ard\data\04_feature\1304_pansharpened.tif
+5962,C:\Users\KOYESHA\cartosat_ard\data\03_primary\5962_cloud_masked.tif,C:\Users\KOYESHA\cartosat_ard\data\01_raw\pan\5962.tif,C:\Users\KOYESHA\cartosat_ard\data\04_feature\5962_pansharpened.tif
